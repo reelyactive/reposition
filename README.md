@@ -10,13 +10,18 @@ Hello reposition!
 ```javascript
 const reposition = require('reposition');
 
+// The coordinate system has its origin at 73.57123°W, 45.50883°N
+//   and uses feet as a unit of measurement
 const COORDINATE_SYSTEM = {
     type: "customOrigin",
     originOffset: [ -73.57123, 45.50883, 0 ],
     measurementUnits: [ 'ft', 'ft', 'ft' ]
 };
 
+// This is the position in the customOrigin coordinate system
 let position = [ -2240.450648739, 4071.88290589, 32.8084 ];
+
+// This is the position converted to WGS84
 let convertedPosition = reposition.toWGS84(position, COORDINATE_SYSTEM);
 
 console.log(convertedPosition);
@@ -38,7 +43,7 @@ A __customOrigin__ coordinate system uses an origin _other than_ 0° longitude, 
       horizontalPlaneRotation: 0
     }
 
-At present, the origin offset coordinate system is assumed to be WGS84.  In future, an additional property may be added to specify this coordinate system.
+At present, the `originOffset` coordinate system is assumed to be WGS84.  In future, an additional property may be added to specify this coordinate system.
 
 
 Contributing
