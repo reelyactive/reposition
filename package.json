@@ -1,0 +1,32 @@
+{
+  "name": "reposition",
+  "homepage": "https://github.com/reelyactive/reposition/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Convert positions from one coordinate system to another.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "positioning",
+    "WGS84"
+  ],
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "./lib/reposition.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/reposition.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/reposition/issues"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "MIT"
+}
