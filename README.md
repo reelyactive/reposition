@@ -1,7 +1,7 @@
 reposition
 ==========
 
-Convert positions from one coordinate system to another.
+Convert positions from one coordinate system to another.  Currently supports the conversion of a __customOffset__ coordinate system to __WGS84__.
 
 
 Hello reposition!
@@ -10,15 +10,19 @@ Hello reposition!
 ```javascript
 const reposition = require('reposition');
 
-const COORDINATE_SYSTEM = {};
+const COORDINATE_SYSTEM = {
+    type: "customOrigin",
+    originOffset: [ -73.57123, 45.50883, 0 ],
+    measurementUnits: [ 'ft', 'ft', 'ft' ]
+};
 
-let position = [ -123, 456, 0 ];
+let position = [ -2240.450648739, 4071.88290589, 32.8084 ];
 let convertedPosition = reposition.toWGS84(position, COORDINATE_SYSTEM);
 
 console.log(convertedPosition);
 ```
 
-Which should yield `[ 1, 2, 3]`.
+Which should yield `[ -73.58, 45.52, 10 ]`.
 
 
 Coordinate Systems
