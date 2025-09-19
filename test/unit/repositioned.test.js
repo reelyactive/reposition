@@ -4,7 +4,7 @@
  */
 
 
-const reposition = require('../../lib/reposition.js');
+const repositioned = require('../../lib/repositioned.js');
 const assert = require ('assert');
 
 
@@ -39,44 +39,44 @@ const EXPECTED_DATA_CUSTOM_ORIGIN = [ -73.58, 45.52, 10 ];
 
 
 // Describe the scenario
-describe('reposition', () => {
+describe('repositioned', () => {
 
   // Test the toWGS84 function with no input data
   it('should handle no input data', () => {
-    assert.deepEqual(reposition.toWGS84(), EXPECTED_DATA_INVALID_INPUT);
+    assert.deepEqual(repositioned.toWGS84(), EXPECTED_DATA_INVALID_INPUT);
   });
 
   // Test the toWGS84 function with an invalid position
   it('should handle an invalid position', () => {
-    assert.deepEqual(reposition.toWGS84(INPUT_DATA_INVALID_POSITION,
-                                        INPUT_DATA_CUSTOM_ORIGIN_SYSTEM),
+    assert.deepEqual(repositioned.toWGS84(INPUT_DATA_INVALID_POSITION,
+                                          INPUT_DATA_CUSTOM_ORIGIN_SYSTEM),
                      EXPECTED_DATA_INVALID_INPUT);
   });
 
   // Test the toWGS84 function with an invalid coordinate system
   it('should handle an invalid coordinate system', () => {
-    assert.deepEqual(reposition.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_DEG,
-                                        INPUT_DATA_INVALID_SYSTEM),
+    assert.deepEqual(repositioned.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_DEG,
+                                          INPUT_DATA_INVALID_SYSTEM),
                      EXPECTED_DATA_INVALID_INPUT);
   });
 
   // Test the toWGS84 function with a custom origin
   it('should handle a customOrigin coordinate system', () => {
-    assert.deepEqual(reposition.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_DEG,
-                                        INPUT_DATA_CUSTOM_ORIGIN_SYSTEM),
+    assert.deepEqual(repositioned.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_DEG,
+                                          INPUT_DATA_CUSTOM_ORIGIN_SYSTEM),
                      EXPECTED_DATA_CUSTOM_ORIGIN);
   });
 
   // Test the toWGS84 function with a custom origin using feet
   it('should handle a customOrigin coordinate system using feet', () => {
-    assert.deepEqual(reposition.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_FT,
-                                        INPUT_DATA_CUSTOM_ORIGIN_SYSTEM_FT),
+    assert.deepEqual(repositioned.toWGS84(INPUT_DATA_CUSTOM_ORIGIN_POSITION_FT,
+                                          INPUT_DATA_CUSTOM_ORIGIN_SYSTEM_FT),
                      EXPECTED_DATA_CUSTOM_ORIGIN);
   });
 
   // Test the toWGS84 function with a custom origin with rotation
   it('should handle a customOrigin coordinate system with rotation', () => {
-    assert.deepEqual(reposition.toWGS84(
+    assert.deepEqual(repositioned.toWGS84(
                                      INPUT_DATA_CUSTOM_ORIGIN_POSITION_ROTATED,
                                      INPUT_DATA_CUSTOM_ORIGIN_SYSTEM_ROTATED),
                      EXPECTED_DATA_CUSTOM_ORIGIN);

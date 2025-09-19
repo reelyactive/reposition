@@ -1,6 +1,6 @@
 {
-  "name": "reposition",
-  "homepage": "https://github.com/reelyactive/reposition/",
+  "name": "repositioned",
+  "homepage": "https://github.com/reelyactive/repositioned/",
   "author": {
     "name": "reelyActive",
     "email": "info@reelyactive.com"
@@ -15,15 +15,15 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "main": "./lib/reposition.js",
+  "main": "./lib/repositioned.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reelyactive/reposition.git"
+    "url": "https://github.com/reelyactive/repositioned.git"
   },
   "dependencies": {},
   "devDependencies": {},
   "bugs": {
-    "url": "https://github.com/reelyactive/reposition/issues"
+    "url": "https://github.com/reelyactive/repositioned/issues"
   },
   "contributors": [
     { "name": "Jeffrey Dungen" }

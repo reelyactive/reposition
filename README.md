@@ -1,14 +1,14 @@
-reposition
-==========
+repositioned
+============
 
 Convert positions from one coordinate system to another.  Currently supports the conversion of a __customOffset__ coordinate system to __WGS84__.
 
 
-Hello reposition!
------------------
+Hello repositioned!
+-------------------
 
 ```javascript
-const reposition = require('reposition');
+const repositioned = require('repositioned');
 
 // The coordinate system has its origin at 73.57123°W, 45.50883°N
 //   and uses feet as a unit of measurement
@@ -22,7 +22,7 @@ const COORDINATE_SYSTEM = {
 let position = [ -2240.450648739, 4071.88290589, 32.8084 ];
 
 // This is the position converted to WGS84
-let convertedPosition = reposition.toWGS84(position, COORDINATE_SYSTEM);
+let convertedPosition = repositioned.toWGS84(position, COORDINATE_SYSTEM);
 
 console.log(convertedPosition);
 ```
